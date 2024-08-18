@@ -2,7 +2,9 @@ version: "3.9"
 
 services:
   app:
-    image: golang:1.19.0
+    build:
+      context: ./
+      dockerfile: Dockerfile
     container_name: go
     ports:
       - "80:80"
